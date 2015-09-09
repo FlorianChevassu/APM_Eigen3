@@ -8,7 +8,7 @@ script:
 - cd APM_Eigen3
 - mkdir build
 - cd build
-- $cmakeBin ..
+- $cmakeBin .. 
 - make
 
 os: linux
