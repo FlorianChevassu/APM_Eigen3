@@ -2,13 +2,16 @@
 language: cpp
 compiler: clang
 install:
+- cd ..
 - wget -qO- http://www.cmake.org/files/v3.3/cmake-3.3.0-Linux-x86_64.tar.gz | tar xvz
-script:
 - export cmakeBin=$(pwd)/cmake-3.3.0-Linux-x86_64/bin/cmake
+- git clone https://github.com/FlorianChevassu/APM.git
+- cd APM_Eigen3
+script:
 - cd APM_Eigen3
 - mkdir build
 - cd build
-- $cmakeBin .. 
+- $cmakeBin ..
 - make
 
 os: linux
